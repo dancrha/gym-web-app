@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
 
-type Props = {};
+type Props = {  
+  page: string;
+  selectedPage: string;
+  setSelectedPage: (value: string) => void;};
 
 const Navbar = (props: Props) => {
   const flexBetween = "flex items-center justify-between";
