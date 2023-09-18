@@ -7,7 +7,6 @@ import {
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Benefit from "./Benefit";
-import ActionButton from "@/shared/ActionButton";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 
 const benefits: Array<BenefitType> = [
@@ -24,7 +23,7 @@ const benefits: Array<BenefitType> = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus eros sit amet erat hendrerit, non ullamcorper tortor luctus. Praesent at est in mauris ornare sollicitudin.",
   },
   {
-    icon: <HomeModernIcon className='h-6 w-6' />,
+    icon: <AcademicCapIcon className='h-6 w-6' />,
     title: "Expert and Pro Trainers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus eros sit amet erat hendrerit, non ullamcorper tortor luctus. Praesent at est in mauris ornare sollicitudin.",
