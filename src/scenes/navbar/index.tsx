@@ -55,9 +55,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 </div>
                 <div className={`${flexBetween} gap-8`}>
                   <p>Sign In</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>
+                  <button
+                    className='rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white'
+                    onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+                  >
                     Become a Member
-                  </ActionButton>
+                  </button>
                 </div>
               </div>
             ) : (
