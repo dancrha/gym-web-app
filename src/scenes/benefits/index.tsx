@@ -7,6 +7,8 @@ import {
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Benefit from "./Benefit";
+import ActionButton from "@/shared/ActionButton";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 
 const benefits: Array<BenefitType> = [
   {
@@ -87,26 +89,77 @@ function Benefits({ setSelectedPage }: Props) {
           ))}
         </motion.div>
         {/* Graphics and Description */}
-        <div>
+        <div className='mt-16 items-center justify-between gap-20 md:mt-28 md:flex'>
           {/* GRAPHIC */}
-          <img src='' alt='' />
+          <img
+            className='mx-auto'
+            src={BenefitsPageGraphic}
+            alt='benefits-page-graphic'
+          />
 
           {/* Description */}
           <div>
             {/* Title */}
-            <div className='relative'>
+            <div>
               <div className='before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves'>
-                <div>
+                <motion.div
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
                   <HText>
                     MILLIONS OF HAPPY MEMBERS GETTING {""}
                     <span className='text-primary-500'>FIT</span>
                   </HText>
-                </div>
+                </motion.div>
               </div>
             </div>
             {/* Description */}
-
+            <motion.div
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <p className='my-5'>
+                Fusce varius nunc turpis, sed sodales tellus dictum non. Nam ut
+                interdum tellus. Maecenas eleifend augue in pulvinar congue.
+                Suspendisse pulvinar consequat nisi nec lobortis. Suspendisse
+                potenti. Donec aliquam tempus neque, sed consectetur eros
+                sollicitudin eu. Nullam vitae mollis nisl, at vestibulum enim.
+                Praesent mollis posuere facilisis.
+              </p>
+              <p className='mb-5'>
+                Nunc id bibendum ante. Mauris placerat nisl justo, et
+                sollicitudin erat gravida vel. Pellentesque quis mauris posuere,
+                euismod arcu quis, pellentesque tellus. Aenean ut blandit arcu,
+                et bibendum elit. Aenean efficitur lectus ac iaculis faucibus.
+                Vestibulum laoreet a lacus quis feugiat. Cras ultrices mollis
+                lorem ut suscipit. Pellentesque pretium metus elit, sed faucibus
+                est molestie in. Nullam consectetur volutpat odio, id faucibus
+                metus eleifend vel.
+              </p>
+            </motion.div>
             {/* Button */}
+            <div className='relative mt-16'>
+              <div className='before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles'>
+                <a
+                  className='rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white'
+                  onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+                >
+                  Join Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
