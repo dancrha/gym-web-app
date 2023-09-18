@@ -86,6 +86,29 @@ function Benefits({ setSelectedPage }: Props) {
             />
           ))}
         </motion.div>
+        {/* Graphics and Description */}
+        <div>
+          {/* GRAPHIC */}
+          <img src='' alt='' />
+
+          {/* Description */}
+          <div>
+            {/* Title */}
+            <div className='relative'>
+              <div className='before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves'>
+                <div>
+                  <HText>
+                    MILLIONS OF HAPPY MEMBERS GETTING {""}
+                    <span className='text-primary-500'>FIT</span>
+                  </HText>
+                </div>
+              </div>
+            </div>
+            {/* Description */}
+
+            {/* Button */}
+          </div>
+        </div>
       </motion.div>
     </section>
   );
