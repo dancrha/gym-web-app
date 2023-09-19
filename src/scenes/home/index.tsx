@@ -1,4 +1,3 @@
-import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
@@ -6,6 +5,7 @@ import SponsorFortune from "@/assets/SponsorFortune.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
+import everfit from "@/assets/everfit.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -36,7 +36,7 @@ function Home({ setSelectedPage }: Props) {
           >
             <div className='relative'>
               <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
-                <img src={HomePageText} alt='home-page-text' />
+                <img className='' src={everfit} alt='home-page-text' />
               </div>
             </div>
             <p className='mt-8 text-sm'>
